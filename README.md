@@ -23,26 +23,29 @@ npm audit fix --force --> Corrige los problemas encontrados en las librerías in
 
 Muchas de las vulnerabilidades que aparecen se deben a que las dependencias se encuentran desactualizadas. Es por ello que debemos intentar que todo se actualice a la ultima version.
 
+Para eliminar dependencias ya instaladas puedes o ejecutar el comando npm uninstall <nombre-paquete> o directamente meterte en el archivo package.json de tu proyecto y eliminar del listado de dependencias la línea del nombre de la dependencia que queremos eliminar. Posteriormente ejecutamos
 
-Para eliminar dependencias ya instaladas puedes o ejecutar el comando npm uninstall <nombre-paquete> o directamente meterte en el archivo package.json de tu proyecto y eliminar la línea del nombre de la dependencia.
+rm -rf node_modules/ => para eliminar toda la carpeta de node_modules y así depurar y recompilar todo lo que no se usa, y volvemos a ejecutar: npm install
 
-Otra forma es ir al archivo package.json y eliminar del listado de dependencia, dependencias de desarrollo o dependencias opcionales; una vez eliminado de la lista ejecutamos
+rm (remove)
 
-rm -rf node_modules/
-npm install
+con ls listamos todo lo que tengo en mi directorio y con ls -l me lo muestra en vertical.
 
-Para compilar el proyecto usamos
+
+
+Para compilar el proyecto y prepararlo para producción usamos:
 
 npm run build
 
 Para compilar el proyecto y obtener mas informacion usamos
 
-
 npm run build --dd
 
-Para ver librerias deprecadas
+Para ver librerias que tenemos instaladas en nuestro proyecto que se encuentran deprecadas o que ya no tendrán actualizaciones.
+Este comando tambien sincroniza lo que es mi package.json con mi package-lock.
 
 npm ci
+
 
 
 ♻️ npm uninstall babel-eslint --> *babel-eslint* es solo un paquete de ejemplo, este comando borra la dependecia junto con todo su arbol de sub-dependencias
