@@ -27,7 +27,10 @@ Para eliminar dependencias ya instaladas puedes o ejecutar el comando npm uninst
 
 rm -rf node_modules/ => para eliminar toda la carpeta de node_modules y así depurar y recompilar todo lo que no se usa, y volvemos a ejecutar: npm install
 
-rm (remove)
+    rm → comando para eliminar ítem.
+    -r → recursividad.
+    -f → forzar.
+
 
 con ls listamos todo lo que tengo en mi directorio y con ls -l me lo muestra en vertical.
 
@@ -37,7 +40,7 @@ Para compilar el proyecto y prepararlo para producción usamos:
 
 npm run build
 
-Para compilar el proyecto y obtener mas informacion usamos
+Para compilar el proyecto y obtener mas informacion usamos, usamos el modo verbose (--dd)
 
 npm run build --dd
 
@@ -46,7 +49,10 @@ Este comando tambien sincroniza lo que es mi package.json con mi package-lock.
 
 npm ci
 
+npm ci es npm clean install. Este comando es similar al comando npm install. Con la diferencia que está pensado para ser utilizado en ambientes automatizados.
 
+Por ejemplo. Plataforma de pruebas, integración continua o cualquier otra situación que se requiera realizar una instalación limpia de las dependencias.
+El package.lock contiene toda la información necesaria de todas las dependencias que están dentro del proyecto. Es como un registro mucho mas completo de todas y cada una de las dependencias instaladas.
 
 ♻️ npm uninstall babel-eslint --> *babel-eslint* es solo un paquete de ejemplo, este comando borra la dependecia junto con todo su arbol de sub-dependencias
 
